@@ -1,0 +1,36 @@
+#campaigns {
+    background-color: #1995ad;
+  }
+  
+  #campaignsearchbox {
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+  
+  .campaign_image {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .campaign_head {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .campaign_p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  .shadow-sm {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rounded-3 {
+    border-radius: 16px;
+  }
+  

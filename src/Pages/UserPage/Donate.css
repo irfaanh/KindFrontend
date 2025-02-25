@@ -1,0 +1,67 @@
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Full viewport height */
+  }
+  
+  .donate-form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .donate-header {
+    text-align: center;
+    font-size: 24px;
+    color: #1995ad;
+    margin-bottom: 1rem;
+  }
+  
+  .donate-input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    font-size: 16px;
+  }
+  
+  .donate-button {
+    background-color: #1995ad;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .donate-button:disabled {
+    background-color: #ccc;
+  }
+  
+  .donate-button:hover {
+    background-color: #0d6f82;
+  }
+  
+  .card-element-wrapper {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  input, .StripeElement {
+    width: 100%;
+  }
+  
+  input:focus, .StripeElement:focus {
+    border-color: #1995ad;
+  }
+  

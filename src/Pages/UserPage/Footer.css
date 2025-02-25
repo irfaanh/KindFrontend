@@ -1,0 +1,119 @@
+*{
+    font-family: sans-serif;
+    font-weight: 800;
+    font-style:normal;
+  }
+.footer_section {
+    width: 100%;
+    padding: 50px 20px; /* Adjust padding for smaller screens */
+    background-color: #f8f8f8; /* Optional for better contrast */
+}
+
+.footer_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_inner {
+    /* display: flex; */
+    flex-direction: column; 
+    align-items:center;
+    /* justify-content: space-between; */
+    gap: 20px; /* Reduced gap for smaller screens */
+    width: 100%;
+}
+.inner_footer{
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .footer_inner {
+        flex-direction: row; /* Horizontal layout for larger screens */
+        justify-content: space-between;
+        gap: 50px;
+        max-width: 1200px; /* Center the content for large screens */
+    }
+}
+@media (max-width:768px){
+    .inner_footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.footer_logo {
+    height: 100px; /* Adjust size for responsiveness */
+    width: 100px;
+}
+
+@media (min-width: 768px) {
+    .footer_logo {
+        height: 120px;
+        width: 120px;
+    }
+}
+
+.foot_links {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_ul {
+    list-style-type: none;
+    display: flex;
+
+    flex-direction: row; /* Default for smaller screens */
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.footer_ul li{
+    cursor: pointer;
+}
+
+
+.copywrite_section {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column; /* Default for smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .copywrite_section {
+        flex-direction: row; /* Horizontal for larger screens */
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .icons i {
+        font-size: 24px;
+    }
+}

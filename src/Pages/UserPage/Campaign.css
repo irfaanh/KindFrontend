@@ -1,0 +1,29 @@
+html {
+    scroll-behavior: smooth;
+  }
+.donate_button{
+    padding:8px 15px 8px 15px;
+    border-radius: 5px;
+    font-weight: bolder;
+    border: none;
+    background-color: #1995AD;
+    color: #F1F1F2;
+}
+.donate_button:hover{
+    background-color: #0d6f82;
+}
+.campaign_image{
+    border: 1px solid beige;
+    border-radius: 5px;
+}
+.campaign_head{
+    color: #1995AD;
+    font-size: 25px;
+    font-weight: 800;
+}
+.campaign_p{
+    font-weight: 800;
+}
+#campaignsearchbox{
+    outline: 0;
+}
