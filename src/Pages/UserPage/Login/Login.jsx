@@ -27,7 +27,7 @@ const Login = () => {
         toast.success("Logged In");
         navigate("/");
       } catch (err) {
-        toast.error(err.message || "User is Blocked");
+        toast.error("Login failed");
         console.log(err);
       }
     },

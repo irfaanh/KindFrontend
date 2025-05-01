@@ -29,7 +29,7 @@ const OrgLogin = () => {
         toast.success("Logged In");
         navigate("/organization");
       } catch (err) {
-        toast.error(err.message);
+        toast.error("Login failed");
         console.log(err);
       }
     },

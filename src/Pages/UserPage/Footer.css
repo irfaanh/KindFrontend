@@ -78,6 +78,10 @@
 .footer_ul li{
     cursor: pointer;
 }
+.footer_ul a{
+    text-decoration: none;
+    color: black;
+}
 
 
 .copywrite_section {

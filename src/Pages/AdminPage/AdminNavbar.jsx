@@ -38,7 +38,7 @@ const AdminNavbar = () => {
           <div className="collapse navbar-collapse content" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="#campaigns">
+                <a className="nav-link" href="/admin/managecampaigndetails">
                   Campaigns
                 </a>
               </li>
@@ -48,11 +48,6 @@ const AdminNavbar = () => {
                   Messages
                 </a>
                 </Link>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#about">
-                  About
-                </a>
               </li>
             </ul>
             {/* {id ? <Link to={'/profilesection'}><CgProfile  className="profile"/></Link> : <div className="navbtn">

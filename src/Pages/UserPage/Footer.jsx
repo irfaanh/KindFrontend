@@ -16,10 +16,8 @@ const Footer = () => {
               />
               <div className="foot_links">
                 <ul className="footer_ul">
-                  <li>Campaigns</li>
-                  <li>Contact</li>
-                  <li>About</li>
-                  {!id ?  <li>Sign in</li> : ""}
+                  <a href="#campaigns"><li>Campaigns</li></a>
+                  <a href="#contact"><li>Contact</li></a>
                  
                 </ul>
               </div>

@@ -47,11 +47,6 @@ const Navbar = () => {
                   Contact
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#about">
-                  About
-                </a>
-              </li>
             </ul>
             {id ? <Link to={'/profilesection'}><CgProfile  className="profile"/></Link> : <div className="navbtn">
               <Link to={'/login'}>

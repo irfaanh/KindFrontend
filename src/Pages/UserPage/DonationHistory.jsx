@@ -6,28 +6,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const DonationHistory = () => {
   const [campaignDonationHistory, setCampaignDonationHistory] = useState([]);
-  const { id :userId } = useSelector((store) => store.user);
-  const { id : campaignId} = useParams();
+  const { id: userId } = useSelector((store) => store.user);
+  const { id: campaignId } = useParams();
 
-  console.log(campaignId);
-  
   const getCampaignDonationHistory = async () => {
     try {
       const { data } = await api.get("/donation/donationhistory", {
         params: { userId, campaignId },
       });
-      console.log(data);
       setCampaignDonationHistory(data.result);
     } catch (err) {
       console.error("Error fetching campaign donation details:", err);
     }
   };
-  console.log(campaignDonationHistory);
-  
 
   useEffect(() => {
     getCampaignDonationHistory();
-  }, [campaignDonationHistory]);
+    // Remove donationHistory from dependency to avoid infinite loop
+  }, []);
 
   return (
     <section
@@ -38,30 +34,29 @@ const DonationHistory = () => {
         minHeight: "100vh",
       }}
     >
-      <div className="container py-4">
-        <h1 className="text-center mb-4 text-white">Donation History</h1>
+      <div className="container py-4 bg-white rounded shadow">
+        <h1 className="text-center mb-4 text-dark">Donation History</h1>
         {campaignDonationHistory.length > 0 ? (
-          campaignDonationHistory.map((donation, index) => (
-            <div
-              key={index}
-              className="row text-center align-items-center py-3 bg-white border rounded-3 mb-4 shadow-sm"
-              style={{
-                minHeight: "150px",
-              }}
-            >
-              <div className="col text-start">
-                <h3 className="text-primary">Donation #{index + 1}</h3>
-                <ul className="list-unstyled mb-0">
-                  <li>
-                    <strong>Amount:</strong> ${donation.amount}
-                  </li>
-                  <li>
-                    <strong>Date:</strong> {donation.donationDate}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          ))
+          <div className="table-responsive">
+            <table className="table table-bordered table-hover text-center">
+              <thead className="table-primary">
+                <tr>
+                  <th>No</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {campaignDonationHistory.map((donation, index) => (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td>${donation.amount}</td>
+                    <td>{donation.donationDate}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         ) : (
           <div className="text-center">
             <p className="text-white fs-4">No donation history found.</p>
