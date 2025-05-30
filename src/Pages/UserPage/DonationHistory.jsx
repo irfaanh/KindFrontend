@@ -23,7 +23,7 @@ const DonationHistory = () => {
   useEffect(() => {
     getCampaignDonationHistory();
     // Remove donationHistory from dependency to avoid infinite loop
-  }, []);
+  }, [campaignDonationHistory]);
 
   return (
     <section

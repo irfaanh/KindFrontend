@@ -6,7 +6,7 @@ import { api } from "../../axios";
 import { Link, useNavigate } from "react-router";
 
 const OrgMessage = () => {
-    const { id } = useSelector(store => store.user)
+    const { id } = useSelector(store => store.organization)
     const navigate = useNavigate()
     const message = useFormik({
       initialValues: {
@@ -32,19 +32,18 @@ const OrgMessage = () => {
             return toast.error("Please LogIn")
           }
           return toast.error("Complete Details");
-
         }
       }
     })
 
     return (
-      <section id="contact" style={{ backgroundColor: "white" }}>
+      <section id="contact" style={{ backgroundColor: "#1995AD" }}>
         <div className="container py-3">
           <div className="row py-5">
             <div className="col text-lg-center d-flex flex-column align-items-center">
-              <h2 className="message_h2" style={{color:'black'}} >
+              <h2 className="message_h2" style={{color:'white'}} >
                 Have any questions? Let us know.</h2>
-              <p className="message_p" style={{color:'black'}}>
+              <p className="message_p" style={{color:'white'}}>
                 We would love to hear from you! Contact us and<br />
                  share any feedback or questions you may have.
               </p>

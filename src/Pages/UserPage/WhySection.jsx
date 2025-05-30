@@ -1,4 +1,3 @@
-import React from "react";
 import "./WhySection.css"; // Optional CSS file for custom styles
 import { FaHandshake } from "react-icons/fa";
 import { FaStopwatch } from "react-icons/fa";
@@ -17,7 +16,9 @@ const WhySection = () => {
             <FaHandshake className="why_icons"/>
             <h3>Trust</h3>
             <p>
-              Your generosity is safe with us.<br /> Every donation is handled transparently<br /> to make a meaningful impact.
+              Your generosity is safe with us.<br /> 
+              Every donation is handled transparently<br /> 
+              to make a meaningful impact.
             </p>
           </div>
           <div className="inner inner2">

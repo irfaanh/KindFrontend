@@ -71,8 +71,8 @@ const CampaignList = () => {
     }
     
   return (
-    <section id="campaigns" className="py-5" style={{ backgroundColor: "#1995AD" }}>
-  <div className="container">
+    <section id="campaigns" className="py-5 vh-100" style={{ backgroundColor: "#1995AD"}}>
+  <div className="container d-flex flex-column align-items-center">
     <h2 className="text-center mb-4 text-white">Campaigns List</h2>
 
     {campaignList.map((campaign, index) => (
