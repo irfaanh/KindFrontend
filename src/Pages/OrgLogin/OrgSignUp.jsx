@@ -25,7 +25,7 @@ function OrgSignUp() {
 
         localStorage.setItem("access_token", data.token);
         localStorage.setItem("role", data.organization.role);
-        console.log(data.user.role);
+        console.log(data.organization.role);
         dispatch(createOrganization(data.organization));
         toast.success("Account Created");
         navigate("/organization");
