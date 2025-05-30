@@ -32,7 +32,7 @@ function SignUp() {
         navigate("/");
       } catch (err) {
         console.log(err);
-        return toast.error("Invalid Credential");
+        return toast.error("SignUp failed");
       }
     },
   });

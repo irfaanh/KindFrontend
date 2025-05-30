@@ -25,12 +25,13 @@ function OrgSignUp() {
 
         localStorage.setItem("access_token", data.token);
         localStorage.setItem("role", data.organization.role);
-        console.log(data.user.role);
+        console.log(data.organization);
         dispatch(createOrganization(data.organization));
         toast.success("Account Created");
         navigate("/organization");
       } catch (err) {
-        return toast.error(err.message);
+        console.log(err)
+        return toast.error('SignUp failed');
       }
     },
   });
