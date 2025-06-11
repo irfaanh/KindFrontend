@@ -21,9 +21,11 @@ const AdminLogin = () => {
         localStorage.setItem("role", data.Admin.role);
 
         toast.success("Logged In");
-        navigate("/admin");
+        setTimeout(() => {
+          navigate("/admin");
+        }, 200);
       } catch (err) {
-        toast.error(err.message);
+        toast.error("Login failed");
         console.log(err);
       }
     },

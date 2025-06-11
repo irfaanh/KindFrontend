@@ -6,6 +6,7 @@ import { Link } from "react-router";
 
 
 const OrgHero = () => {
+  const {id} = useSelector(store => store.organization)
 
 
 
@@ -21,9 +22,13 @@ const OrgHero = () => {
             <p className="cont_p">
               Every donation, no matter how small, brings hope to someone in need.
             </p>
-            <Link to={'/organization/addnewcampaign'}>
+            {id ? <Link to={'/organization/addnewcampaign'}>
                 <button className="cont_btn">Add Campaigns</button>
-            </Link>
+            </Link> :
+            <Link to={'/organization/organizationlogin'}>
+                <button className="cont_btn">Add Campaigns</button>
+            </Link>}
+            
             
           </div>
           <div className="col-lg-6 text-md-center text-sm-center">
