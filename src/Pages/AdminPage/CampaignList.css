@@ -1,17 +1,7 @@
 html {
     scroll-behavior: smooth;
   }
-.donate_button{
-    padding:8px 15px 8px 15px;
-    border-radius: 5px;
-    font-weight: bolder;
-    border: none;
-    background-color: #1995AD;
-    color: #F1F1F2;
-}
-.donate_button:hover{
-    background-color: #0d6f82;
-}
+
 .update_button{
     padding:8px 33px 8px 33px;
     border-radius: 5px;

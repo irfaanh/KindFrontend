@@ -22,7 +22,7 @@ const CampaignList = () => {
 
     useEffect(() => {
         getCampaignList()
-    })
+    },)
 
     const handleDisable = async (id) => {
         try{
@@ -71,14 +71,14 @@ const CampaignList = () => {
     }
     
   return (
-    <section id="campaigns" className="py-5 vh-100" style={{ backgroundColor: "#1995AD"}}>
+    <section id="campaigns" className="py-5" style={{ backgroundColor: "#1995AD"}}>
   <div className="container d-flex flex-column align-items-center">
     <h2 className="text-center mb-4 text-white">Campaigns List</h2>
 
     {campaignList.map((campaign, index) => (
       <div
         key={index}
-        className="row text-center align-items-center py-2 bg-white border rounded-2 my-4"
+        className="row text-center align-items-center py-2 bg-white border rounded-2 my-4 w-100"
       >
         <div className="col-lg-3">
           <img

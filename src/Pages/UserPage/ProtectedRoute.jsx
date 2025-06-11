@@ -1,16 +1,13 @@
-import { Navigate,Outlet } from 'react-router'
+import { Navigate } from "react-router-dom";
 
-const ProtectedRoute = ({allowesUser}) => {
-    const token = localStorage.getItem("access_token")
-    const userRole = localStorage.getItem("role")
+const ProtectedRoute = ({ children, allowedRole }) => {
+  const user = JSON.parse(localStorage.getItem("admin"));
 
-    if(!token){
-        return <Navigate to='/login' replace/>
-    }
-    if(!allowesUser.includes(userRole)){
-        return <Navigate to='/unauthorized' replace/>
-    }
-  return <Outlet/>
-}
+  if (!user || user.role !== allowedRole) {
+    return <Navigate to="/admin/adminlogin" replace />;
+  }
 
-export default ProtectedRoute
+  return children;
+};
+
+export default ProtectedRoute;

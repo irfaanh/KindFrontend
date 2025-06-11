@@ -1,4 +1,3 @@
-import React from 'react'
 import { Toaster } from "react-hot-toast"
 
 import {BrowserRouter,Route,Routes} from 'react-router'
@@ -272,10 +271,12 @@ const Router = () => {
             <Route
               path=""
               element={
+                <ProtectedRoute allowedRole={"Admin"}>
                 <>
                   <AdminHome />
                   <Toaster position="top-left" />
                 </>
+                </ProtectedRoute>
               }
             />
             {/* </Route> */}
@@ -284,56 +285,68 @@ const Router = () => {
             <Route
               path="manageuser"
               element={
+                <ProtectedRoute allowedRole={"Admin"}>
                 <>
                   <UsersList />
                   <Toaster position="top-left" />
                 </>
+                </ProtectedRoute>
               }
             />
             <Route
               path="manageorganization"
               element={
+                <ProtectedRoute allowedRole={"Admin"}>
                 <>
                   <OrganizationList />
                   <Toaster position="top-left" />
                 </>
+                </ProtectedRoute>
               }
             />
 
             <Route
               path="managecampaigndetails"
               element={
+                <ProtectedRoute allowedRole={"Admin"}>
                 <>
                   <CampaignList />
                   <Toaster position="top-left" />
                 </>
+                </ProtectedRoute>
               }
             />
             <Route
               path="updateuser/:id"
               element={
+                <ProtectedRoute allowedRole={"Admin"}>
                 <>
                   <UpdateUserProfile />
                   <Toaster position="top-left" />
                 </>
+                </ProtectedRoute>
               }
             />
             <Route
               path="updateorganization/:id"
               element={
+                <ProtectedRoute allowedRole={"Admin"}>
                 <>
                   <UpdateOrganizationProfile />
                   <Toaster position="top-left" />
                 </>
+                </ProtectedRoute>
               }
             />
             <Route
               path="message"
               element={
+                <ProtectedRoute allowedRole={"Admin"}>
                 <>
                   <AdminMsg />
                   <Toaster position="top-left" />
                 </>
+                </ProtectedRoute>
               }
             />
           </Route>
