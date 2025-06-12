@@ -70,7 +70,7 @@ const ViewDisabledCampaign = () => {
     
 
   return (
-    <section id="campaigns" className="py-5 vh-100" style={{ backgroundColor: "#1995AD" }}>
+    <section id="campaigns" className="py-5" style={{ backgroundColor: "#1995AD" ,height:"100%"}}>
       <div className="container">
       <h2 className="text-center mb-4 text-white">Disabled Campaigns</h2>
 
